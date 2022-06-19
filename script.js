@@ -49,3 +49,4 @@ form.addEventListener('submit', async (event) => {
         resultBox.append(drinkTile);
     });
 });
+
