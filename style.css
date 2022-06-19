@@ -1,13 +1,13 @@
 #resultbox {
-    align-self: center;
-    align-items: center;
-    border:1px solid black;
-    height:200px;
-    width:400px;
-    overflow-y:hidden;
-    overflow-x:scroll;
+  align-self: center;
+  align-items: center;
+  border: 5px center;
+  height: 150px;
+  width: 350px;
+  overflow-y: hidden;
+  overflow-x: scroll;
 }
 
 .hidden {
-    display: none;
+  display: name;
 }
