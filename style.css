@@ -6,15 +6,23 @@ body {
  #resultBox {
   align-self: center;
   align-items: center;
+  border: 50px;
   overflow-x: scroll;
   text-align: center;
   font-weight: bold;
+  font-family:Arial, Helvetica, sans-serif;
 }
 
+#select {
+  text-align: center;
+  font-weight: bold;
+  font-family: Arial, Helvetica, sans-serif;
+}
 
 #form {
   text-align: center;
   font-weight: bold;
+  font-family: Arial, Helvetica, sans-serif;
 }
 .hidden {
   display: name;
