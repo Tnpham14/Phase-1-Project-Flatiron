@@ -1,13 +1,17 @@
-#resultbox {
+#resultBox {
   align-self: center;
   align-items: center;
-  border: 5px center;
-  height: 150px;
-  width: 350px;
+  border: 15px center;
   overflow-y: hidden;
   overflow-x: scroll;
+  text-align: center;
 }
 
 .hidden {
   display: name;
 }
+
+body {background-color: black;}
+
+
+
