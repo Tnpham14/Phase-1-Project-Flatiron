@@ -7,6 +7,12 @@
   text-align: center;
 }
 
+#form {
+align-self: center;
+align-items: center;
+text-align: center;
+}
+
 .hidden {
   display: name;
 }
