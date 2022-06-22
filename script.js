@@ -31,7 +31,7 @@ form.addEventListener('submit', async (event) => {
         resultBox.removeChild(resultBox.firstChild);
     }
 
-    const response = await fetch('https://www.thecocktaildb.com/api/json/v1/1/filter.php?i=' + select.value);
+
     
     const responseBody = await response.json();
     console.log(responseBody);
