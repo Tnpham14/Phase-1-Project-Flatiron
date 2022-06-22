@@ -28,6 +28,12 @@ body {
   display: name;
 }
 
+#submit {
+  text-align: center;
+  font-weight: bold;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
 
 
 
