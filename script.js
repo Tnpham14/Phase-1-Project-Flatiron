@@ -1,4 +1,7 @@
-
+let form = document.getElementById('form');
+let = document.getElementById('input');
+let resultBox = document.getElementById('resultBox');
+let select = document.getElementById('select');
 
 fetch('https://www.thecocktaildb.com/api/json/v1/1/list.php?i=list').then(result => {
     result.json().then(response => {
