@@ -17,21 +17,24 @@ body {
   text-align: center;
   font-weight: bold;
   font-family: Arial, Helvetica, sans-serif;
+  border: 50px;
 }
 
 #form {
   text-align: center;
   font-weight: bold;
   font-family: Arial, Helvetica, sans-serif;
+  border: 50px;
 }
 .hidden {
   display: name;
 }
 
-#submit {
+.submit {
   text-align: center;
   font-weight: bold;
   font-family: Arial, Helvetica, sans-serif;
+  border: 50px;
 }
 
 
