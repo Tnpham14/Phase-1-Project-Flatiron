@@ -3,7 +3,24 @@ const input = document.getElementById('input');
 const resultBox = document.getElementById('resultBox');
 const select = document.getElementById('select');
 
+fetch('https://www.thecocktaildb.com/api/json/v1/1/list.php?i=list').then(result => {
+    result.json().then(response => {
+        console.log('this is res: ', response);
+        response.drinks.sort((e1, e2) => 
+            e1.strIngredient1 - e2.strIngredient1
+        )
+        .forEach(drink => {
+            const option = document.createElement("option");
 
+            option.value = drink.strIngredient1;
+            option.text = drink.strIngredient1;
+
+            console.log('adding options');
+            select.add(option);
+            console.log('added');
+        });
+
+    });
 
 });
 
