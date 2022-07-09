@@ -1,46 +1,22 @@
 body {
   background-color: mediumspringgreen;
+  font-weight: bold;
+  font-family: Arial, Helvetica, sans-serif;
+  text-align: center;
 }
 
  
  #resultBox {
   align-self: center;
   align-items: center;
-  border: 50px;
-  text-align: center;
-  font-weight: bold;
-  font-family:Arial, Helvetica, sans-serif;
-  overflow: auto;
   white-space: nowrap;
  }
-
-#select {
-  text-align: center;
-  font-weight: bold;
-  font-family: Arial, Helvetica, sans-serif;
-  border: 50px;
-}
-
-#form {
-  text-align: center;
-  font-weight: bold;
-  font-family: Arial, Helvetica, sans-serif;
-}
-
-.submit {
-  text-align: center;
-  font-weight: bold;
-  font-family: Arial, Helvetica, sans-serif;
-  border: 50px;
-}
 
 #drink {
   align-self: center;
   align-items: center;
   border: 50px;
-  text-align: center;
   font-size:40px;
-  font-family:Arial, Helvetica, sans-serif;
   padding-bottom: 30px;
 }
 
