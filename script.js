@@ -1,5 +1,5 @@
 let form = document.getElementById('form');
-let = document.getElementById('input');
+let input = document.getElementById('input');
 let resultBox = document.getElementById('resultBox');
 let select = document.getElementById('select');
 
@@ -40,11 +40,25 @@ form.addEventListener('submit', async (event) => {
         const drinkTile = document.createElement('div');
         const title = document.createElement('p');
         const image = document.createElement('img');
+        const modalImage = document.createElement('img');
+        const modal = document.createElement('div'); 
+        modal.append(modalImage);
+        modal.className = 'modal';
         const textNode = document.createTextNode(drink.strDrink);
         image.src = drink.strDrinkThumb;
+        image.className = 'image';
+        image.addEventListener('click', event => {
+            modal.style.display = 'block';
+            modalImage.src = drink.strDrinkThumb;
+        });
+        modal.addEventListener('click', event => {
+            modal.style.display = 'none';
+            modalImage.src = null;
+        })
         title.append(textNode);
         drinkTile.append(title);
         drinkTile.append(image);
+        drinkTile.append(modal);
 
         resultBox.append(drinkTile);
     });
