@@ -1,14 +1,11 @@
-let form = document.getElementById('form');
-let input = document.getElementById('input');
-let resultBox = document.getElementById('resultBox');
-let select = document.getElementById('select');
+const form = document.getElementById('form');
+const input = document.getElementById('input');
+const resultBox = document.getElementById('resultBox');
+const select = document.getElementById('select');
 
 fetch('https://www.thecocktaildb.com/api/json/v1/1/list.php?i=list').then(result => {
     result.json().then(response => {
-        response.drinks.sort((e1, e2) => 
-            e1.strIngredient1 - e2.strIngredient1
-        )
-        .forEach(drink => {
+        response.drinks.forEach(drink => {
             const option = document.createElement("option");
 
             option.value = drink.strIngredient1;
@@ -16,19 +13,20 @@ fetch('https://www.thecocktaildb.com/api/json/v1/1/list.php?i=list').then(result
 
             select.add(option);
 
-    });
+        });
 
+    });
 });
 
 form.addEventListener('submit', async (event) => {
     event.preventDefault();
 
-    while(resultBox.firstChild) {
+    while (resultBox.firstChild) {
         resultBox.removeChild(resultBox.firstChild);
     }
 
     const response = await fetch('https://www.thecocktaildb.com/api/json/v1/1/filter.php?i=' + select.value);
-    
+
     const responseBody = await response.json();
 
     responseBody.drinks.forEach(drink => {
@@ -36,7 +34,7 @@ form.addEventListener('submit', async (event) => {
         const title = document.createElement('p');
         const image = document.createElement('img');
         const modalImage = document.createElement('img');
-        const modal = document.createElement('div'); 
+        const modal = document.createElement('div');
         modal.append(modalImage);
         modal.className = 'modal';
         const textNode = document.createTextNode(drink.strDrink);
@@ -58,4 +56,3 @@ form.addEventListener('submit', async (event) => {
         resultBox.append(drinkTile);
     });
 });
-
