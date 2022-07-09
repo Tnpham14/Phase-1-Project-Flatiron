@@ -12,7 +12,6 @@ fetch('https://www.thecocktaildb.com/api/json/v1/1/list.php?i=list').then(result
             option.text = drink.strIngredient1;
 
             select.add(option);
-
         });
 
     });
@@ -32,14 +31,23 @@ form.addEventListener('submit', async (event) => {
     responseBody.drinks.forEach(drink => {
         const drinkTile = document.createElement('div');
         const title = document.createElement('p');
+        const textNode = document.createTextNode(drink.strDrink);
         const image = document.createElement('img');
+
         const modalImage = document.createElement('img');
         const modal = document.createElement('div');
-        modal.append(modalImage);
-        modal.className = 'modal';
-        const textNode = document.createTextNode(drink.strDrink);
+
         image.src = drink.strDrinkThumb;
         image.className = 'image';
+        modal.className = 'modal';
+
+        title.append(textNode);
+        drinkTile.append(title);
+        drinkTile.append(image);
+        drinkTile.append(modal);
+        resultBox.append(drinkTile);
+        modal.append(modalImage);
+
         image.addEventListener('click', event => {
             modal.style.display = 'block';
             modalImage.src = drink.strDrinkThumb;
@@ -47,12 +55,6 @@ form.addEventListener('submit', async (event) => {
         modal.addEventListener('click', event => {
             modal.style.display = 'none';
             modalImage.src = null;
-        })
-        title.append(textNode);
-        drinkTile.append(title);
-        drinkTile.append(image);
-        drinkTile.append(modal);
-
-        resultBox.append(drinkTile);
+        });
     });
 });
